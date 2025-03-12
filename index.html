@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator </title>
+    <link rel="stylesheet" href="/css/calculator.css">
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <div class="sub-div">
+        <div class="lbl-ClearBtn">
+            <button id="btnClear" onclick=fnClear()> C </button>
+            <input type="text" id="input-text" disabled/>
+            <!-- <label for="lblText" class="lblNumbers"></label> -->
+        </div>
+
+        <div class="grid-items" id="grid-items">
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn7" onclick=fn7()> 7 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn8" onclick=fn8()> 8 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn9" onclick=fn9()> 9 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn-plus" onclick=fnPlus()> + </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn4" onclick=fn4()> 4 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn5" onclick=fn5()> 5 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn6" onclick=fn6()> 6 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn-minus" onclick=fnMinus()> - </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn1" onclick=fn1()> 1 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn2" onclick=fn2()> 2 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn3" onclick=fn3()> 3 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn-divide" onclick=fnDivide()> / </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn0" onclick=fn0()> 0 </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn-dot" onclick=fnDot()> . </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn-equal" onclick=fnEaqual()> = </button>
+            </div>
+
+            <div class="grid-calculation" id="grid-calculation">
+                <button class="btnCal" id="btn-multiply" onclick=fnMultiply()> * </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="/js/calculator.js"></script>
+</body>
+</html>
