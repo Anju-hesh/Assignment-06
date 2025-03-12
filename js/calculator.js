@@ -1,11 +1,11 @@
-let firstOperand = null;
+let firstOperand = null; 
 let operator = null; 
 
 // ---------------------------------------- Button Clicked ----------------------------------------
 
 function appendNumber(number) {
     let display = document.getElementById('input-text');
-    display.value += number; 
+    display.value += number;
 }
 
 document.getElementById('btn7').addEventListener('click', () => appendNumber(7));
@@ -26,8 +26,8 @@ function handleOperator(selectedOperator) {
     let display = document.getElementById('input-text');
     
     if (display.value !== '') {
-        firstOperand = parseFloat(display.value); 
-        operator = selectedOperator;
+        firstOperand = display.value; 
+        operator = selectedOperator; 
         display.value = ''; 
     }
 }
@@ -41,8 +41,8 @@ document.getElementById('btn-divide').addEventListener('click', () => handleOper
 
 function clearDisplay() {
     document.getElementById('input-text').value = '';
-    firstOperand = null; 
-    operator = null; 
+    firstOperand = null;
+    operator = null;
 }
 
 document.getElementById('btnClear').addEventListener('click', clearDisplay);
@@ -53,29 +53,17 @@ function calculateResult() {
     let display = document.getElementById('input-text');
     
     if (firstOperand !== null && operator !== null && display.value !== '') {
-        let secondOperand = parseFloat(display.value); 
-        let result;
+        let secondOperand = display.value; 
+        let expression = `${firstOperand} ${operator} ${secondOperand}`;
 
-        switch (operator) {
-            case '+':
-                result = firstOperand + secondOperand;
-                break;
-            case '-':
-                result = firstOperand - secondOperand;
-                break;
-            case '*':
-                result = firstOperand * secondOperand;
-                break;
-            case '/':
-                result = firstOperand / secondOperand;
-                break;
-            default:
-                result = 'Error';
+        try {
+            let result = eval(expression); 
+            display.value = result; 
+            firstOperand = result.toString(); 
+            operator = null;
+        } catch (error) {
+            display.value = 'Invalid Expression';
         }
-
-        display.value = result; 
-        firstOperand = result;
-        operator = null; 
     }
 }
 
